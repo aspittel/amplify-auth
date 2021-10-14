@@ -1,4 +1,4 @@
-type Post @model @key(name: "byBlog", fields: ["blogID"]) @auth(rules: [{allow: public, operations: [read]}, {allow: owner, operations: [create, update, delete]}]) {
+type Post @model @key(name: "byBlog", fields: ["blogID"]) @auth(rules: [{allow: public, operations: [read]}, {allow: owner, operations: [create, update, delete]}, {allow: private, operations: [create, read]}]) {
   id: ID!
   title: String!
   content: String

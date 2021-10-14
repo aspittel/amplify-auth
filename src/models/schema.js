@@ -84,6 +84,13 @@ export const schema = {
                                     "delete"
                                 ],
                                 "identityClaim": "cognito:username"
+                            },
+                            {
+                                "allow": "private",
+                                "operations": [
+                                    "create",
+                                    "read"
+                                ]
                             }
                         ]
                     }
